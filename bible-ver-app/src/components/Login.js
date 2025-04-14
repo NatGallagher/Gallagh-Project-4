@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Login() {
     return (
       <>
@@ -11,6 +13,8 @@ function Login() {
                   <button>Login</button>
               </form>
         </div>
+        <p></p>
+        <Link to="/register">Register</Link>
       </>
     );
   }
