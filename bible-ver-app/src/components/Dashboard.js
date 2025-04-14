@@ -1,6 +1,33 @@
 import {Link} from "react-router-dom"
+import { useRef } from "react"
 
 function Dashboard() {
+
+    function salvation() {
+        let msgText = "salvation"
+        console.log(msgText);
+    }
+
+    function answPrayer() {
+        let msgText = "answPrayer"
+        console.log(msgText);
+    }
+
+    function victory() {
+        let msgText = "victory"
+        console.log(msgText);
+    }
+
+    function forgivness() {
+        let msgText = "forgiveness"
+        console.log(msgText);
+    }
+
+    function guidance() {
+        let msgText = "guidance"
+        console.log(msgText);
+    }
+    
     return (
       <>
         <div className="div-main">
@@ -11,11 +38,11 @@ function Dashboard() {
                 <table>
                     <tr>
                     <td>
-                        <p className="emotion">Assurance of Salvation</p>
-                        <p className="emotion">Assurance of Answered Prayer</p>
-                        <p className="emotion">Assurance of Victory</p>
-                        <p className="emotion">Assurance of Forgiveness</p>
-                        <p className="emotion">Assurance of Guidance</p>
+                        <button className="emotion" onClick={salvation}>Assurance of Salvation</button>
+                        <button className="emotion" onClick={answPrayer}>Assurance of Answered Prayer</button>
+                        <button className="emotion" onClick={victory}>Assurance of Victory</button>
+                        <button className="emotion" onClick={forgivness}>Assurance of Forgiveness</button>
+                        <button className="emotion" onClick={guidance}>Assurance of Guidance</button>
                     </td>
                     <td>
                         <div className="verse">
