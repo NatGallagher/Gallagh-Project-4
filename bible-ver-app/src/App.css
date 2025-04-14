@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.div-scroll-1 {
+  border: 1px solid #000000;
+  display: inline-block;
+  background-color: whitesmoke;
+}
+
+.column-right {
+  text-align: right;
+  float: right;
+}
+
+.div-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
