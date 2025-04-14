@@ -9,21 +9,21 @@ function Dashboard() {
         let msgText = "salvation"
         console.log(msgText);
 
-        verseDisplay.current.innerHTML = `"This is the testimony. God has given us eternal life. This life is in His son. Whoever has the Son has this life, whoever does not have the Son of God does not have life" -1 John 5:11-12`
+        verseDisplay.current.innerHTML = `"This is the testimony: God has given us eternal life, and this life is in His Son. Whoever has the Son has Life; whoever does not have the Son of God does not have life" -1 John 5:11-12`
     }
 
     function answPrayer() {
         let msgText = "answPrayer"
         console.log(msgText);
 
-        verseDisplay.current.innerHTML = `"Until now you have not asked for anything in my name. Ask and you shall receive and your joy may be complete." -John 16:24`
+        verseDisplay.current.innerHTML = `"Until now you have not asked for anything in my name. Ask and you will receive, and your joy may be complete." -John 16:24`
     }
 
     function victory() {
         let msgText = "victory"
         console.log(msgText);
 
-        verseDisplay.current.innerHTML = `"No temptation has overtaken you except what is common to mankind. And God is faithful, He will not let you be tempted beyond what you can bear, but when you are tempted He will provide a way out so that you may endure it." -Corinthians 10:14`
+        verseDisplay.current.innerHTML = `"No temptation has overtaken you except what is common to mankind. And God is faithful; He will not let you be tempted beyond what you can bear. But when you are tempted, He will also provide a way out so that you can endure it." -Corinthians 10:13`
     }
 
     function forgivness() {
@@ -37,7 +37,7 @@ function Dashboard() {
         let msgText = "guidance"
         console.log(msgText);
 
-        verseDisplay.current.innerHTML = `"Trust in the Lord with all your heart and lean not on your own understanding. In all your ways submit to Him and He will make your paths straight." -Proverbs 3:5-6`
+        verseDisplay.current.innerHTML = `"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him, and He will make your paths straight." -Proverbs 3:5-6`
     }
     
     return (
