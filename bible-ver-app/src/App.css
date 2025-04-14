@@ -48,9 +48,29 @@
   float: right;
 }
 
+.column-left {
+  float: left;
+}
+
 .div-main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  overflow: auto;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.emotion {
+  border: 1px solid black;
+  margin: 0px;
+  height: 100px;
+  width: 200px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }

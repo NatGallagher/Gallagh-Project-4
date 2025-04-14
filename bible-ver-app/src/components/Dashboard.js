@@ -7,20 +7,22 @@ function Dashboard() {
             <div className="div-scroll-1">
             <h2>Verses of Encouragement</h2>
             </div>
-            <table>
-                <tr>
-                <td>
-                    <p>Catagory 1</p>
-                    <p>Catagory 2</p>
-                    <p>Catagory 3</p>
-                    <p>Catagory 4</p>
-                    <p>Catagory 5</p>
-                </td>
-                <td className="column-right">
-                    <p>Verse</p>
-                </td>
-                </tr>
-            </table>
+            <div className="table-container">
+                <table>
+                    <tr>
+                    <td>
+                        <p className="emotion">Catagory 1</p>
+                        <p className="emotion">Catagory 2</p>
+                        <p className="emotion">Catagory 3</p>
+                        <p className="emotion">Catagory 4</p>
+                        <p className="emotion">Catagory 5</p>
+                    </td>
+                    <td>
+                        <p className="column-right">Verse</p>
+                    </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <p></p>
         <Link to="/login">Logout</Link>
