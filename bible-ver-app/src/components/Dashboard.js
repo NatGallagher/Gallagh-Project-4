@@ -3,29 +3,41 @@ import { useRef } from "react"
 
 function Dashboard() {
 
+    const verseDisplay = useRef("");
+
     function salvation() {
         let msgText = "salvation"
         console.log(msgText);
+
+        verseDisplay.current.innerHTML = `"This is the testimony. God has given us eternal life. This life is in His son. Whoever has the Son has this life, whoever does not have the Son of God does not have life" -1 John 5:11-12`
     }
 
     function answPrayer() {
         let msgText = "answPrayer"
         console.log(msgText);
+
+        verseDisplay.current.innerHTML = `"Until now you have not asked for anything in my name. Ask and you shall receive and your joy may be complete." -John 16:24`
     }
 
     function victory() {
         let msgText = "victory"
         console.log(msgText);
+
+        verseDisplay.current.innerHTML = `"No temptation has overtaken you except what is common to mankind. And God is faithful, He will not let you be tempted beyond what you can bear, but when you are tempted He will provide a way out so that you may endure it." -Corinthians 10:14`
     }
 
     function forgivness() {
         let msgText = "forgiveness"
         console.log(msgText);
+
+        verseDisplay.current.innerHTML = `"If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.” -1 John 1:9`
     }
 
     function guidance() {
         let msgText = "guidance"
         console.log(msgText);
+
+        verseDisplay.current.innerHTML = `"Trust in the Lord with all your heart and lean not on your own understanding. In all your ways submit to Him and He will make your paths straight." -Proverbs 3:5-6`
     }
     
     return (
@@ -45,7 +57,7 @@ function Dashboard() {
                         <button className="emotion" onClick={guidance}>Assurance of Guidance</button>
                     </td>
                     <td>
-                        <div className="verse">
+                        <div className="verse" ref={verseDisplay}>
                             "No temptation has overtaken you except what is common to mankind. And God is faithful, He will not let you be tempted beyond what you can bear, but when you are tempted He will provide a way out so that you may endure it." -Corinthians 10:14
                         </div>
                     </td>
