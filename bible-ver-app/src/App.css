@@ -65,6 +65,7 @@
   display: grid;
   grid-template-rows: 5;
   grid-template-columns: 1;
+  margin-top: 10px;
 }
 
 .emotion {
