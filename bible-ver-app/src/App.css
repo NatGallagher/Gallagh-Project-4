@@ -60,9 +60,11 @@
 }
 
 .table-container {
-  overflow: auto;
   border: 1px solid black;
   width: 50%;
+  display: grid;
+  grid-template-rows: 5;
+  grid-template-columns: 1;
 }
 
 .emotion {
@@ -77,11 +79,9 @@
 }
 
 .verse {
+  grid-row: span 5;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  border: 1px solid black;
-  height: 300px;
-  width: 300px;
 }
