@@ -58,7 +58,9 @@ function Dashboard() {
                     </td>
                     <td>
                         <div className="verse" ref={verseDisplay}>
-                            
+                           Memory verses!<br/>
+                           Click on the Assurance we have through God's Word. <br/>
+                           Study and test your memory. 
                         </div>
                     </td>
                     </tr>
