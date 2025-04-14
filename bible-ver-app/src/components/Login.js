@@ -14,7 +14,8 @@ function Login() {
               </form>
         </div>
         <p></p>
-        <Link to="/register">Register</Link>
+        <Link to="/register">Register</Link> {" | "}
+        <Link to="/">Home</Link>
       </>
     );
   }

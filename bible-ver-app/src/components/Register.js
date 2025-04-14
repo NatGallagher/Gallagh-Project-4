@@ -16,7 +16,8 @@ function Register() {
               </form>
         </div>
         <p></p>
-        <Link to="/">Login</Link>
+        <Link to="/">Login</Link> {" | "}
+        <Link to="/">Home</Link>
       </>
     );
   }
