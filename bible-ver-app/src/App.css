@@ -73,4 +73,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.verse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  height: 300px
 }

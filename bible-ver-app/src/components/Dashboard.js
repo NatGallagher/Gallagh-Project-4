@@ -11,14 +11,16 @@ function Dashboard() {
                 <table>
                     <tr>
                     <td>
-                        <p className="emotion">Catagory 1</p>
-                        <p className="emotion">Catagory 2</p>
-                        <p className="emotion">Catagory 3</p>
-                        <p className="emotion">Catagory 4</p>
-                        <p className="emotion">Catagory 5</p>
+                        <p className="emotion">Assurance of Salvation</p>
+                        <p className="emotion">Assurance of Answered Prayer</p>
+                        <p className="emotion">Assurance of Victory</p>
+                        <p className="emotion">Assurance of Forgiveness</p>
+                        <p className="emotion">Assurance of Guidance</p>
                     </td>
                     <td>
-                        <p className="column-right">Verse</p>
+                        <div className="verse">
+                            "No temptation has overtaken you except what is common to mankind. And God is faithful, He will not let you be tempted beyond what you can bear, but when you are tempted He will provide a way out so that you may endure it." -Corinthians 10:14
+                        </div>
                     </td>
                     </tr>
                 </table>
