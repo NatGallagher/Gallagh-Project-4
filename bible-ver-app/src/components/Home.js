@@ -6,8 +6,8 @@ function Home() {
 
     return (
       <>
-        <h2>Daily Encouragement</h2>
-        <h3>Bible Verses</h3>
+        <h2>Memory Verses</h2>
+        <p>Verses of Assurance</p>
         <p></p>
         <p>
           <Link to="/login">Login</Link>

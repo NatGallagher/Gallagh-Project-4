@@ -5,7 +5,7 @@ function Dashboard() {
       <>
         <div className="div-main">
             <div className="div-scroll-1">
-            <h2>Verses of Encouragement</h2>
+            <h2>Verses of Assurance</h2>
             </div>
             <div className="table-container">
                 <table>

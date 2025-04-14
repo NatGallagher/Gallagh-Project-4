@@ -4,7 +4,7 @@ function Register() {
     return (
       <>
         <div>
-          <h2>Daily Encouragement</h2>
+          <h2>Memory Verses</h2>
           <h4>Register</h4>
           <form>
                   <label>Username: </label><input type="text" placeholder="* username" maxLength={25}></input><br/>
