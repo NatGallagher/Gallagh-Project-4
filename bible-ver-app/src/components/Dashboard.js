@@ -58,7 +58,7 @@ function Dashboard() {
                     </td>
                     <td>
                         <div className="verse" ref={verseDisplay}>
-                            "No temptation has overtaken you except what is common to mankind. And God is faithful, He will not let you be tempted beyond what you can bear, but when you are tempted He will provide a way out so that you may endure it." -Corinthians 10:14
+                            
                         </div>
                     </td>
                     </tr>
