@@ -32,6 +32,18 @@ function Login() {
       setMsg(msg)
     }
 
+    if (_uid == "user1" && _pwd == "pwd1") {
+      navigate("/dashboard");
+    }
+
+    else {
+      msg = "invalid username/password"
+      setMsg(msg);
+    }
+
+    txtusername.current.value = "";
+    txtpassword.current.value = "";
+
   }
 
     return (
