@@ -41,7 +41,7 @@ function Login() {
     .then((data) => {
 
       if(data.login === true) {
-        navigate("/dashboard");
+        navigate("/dashboard",{replace: true});
       }
 
       setMsg(data.msg)
