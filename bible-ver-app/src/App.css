@@ -43,14 +43,6 @@
   background-color: whitesmoke;
 }
 
-.column-right {
-  text-align: right;
-  float: right;
-}
-
-.column-left {
-  float: left;
-}
 
 .div-main {
   display: flex;
@@ -84,5 +76,4 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 400px;
 }
