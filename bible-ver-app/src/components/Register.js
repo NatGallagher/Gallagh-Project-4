@@ -1,18 +1,76 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 
 function Register() {
+
+  let navigate = useNavigate();
+
+  const txtusername = useRef("");
+  const txtpassword = useRef("");
+  const confusername = useRef("");
+  const confpassword = useRef("");
+  const [msgText, setMsg] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    console.log("handle submit");
+
+    let msg = ""
+    let replitRul = "https://280f9539-b42b-4dc9-b331-82899c3782f0-00-21yat16xiedzc.picard.replit.dev"
+
+    const _url = `${replitRul}/register`;
+
+    const _uid = txtusername.current.value;
+    const _pwd = txtpassword.current.value;
+    const _confirmuid = confusername.current.value;
+    const _confirmpwd = confpassword.current.value;
+
+    if (_uid == null || _uid.trim().length == 0) {
+      msg = "Username is required";
+      console.log(msg)
+      setMsg(msg);
+      return false;
+    }
+
+    if (_pwd == null || _pwd.trim().length == 0) {
+      msg = "Password is required";
+      console.log(msg)
+      setMsg(msg);
+      return false;
+    }
+
+    if (_uid !== _confirmuid) {
+      msg = "username and confirm username do not match"
+      console.log(msg);
+      setMsg(msg);
+      return false;
+      
+    }
+
+    if (_pwd !== _confirmpwd) {
+      msg = "password and confirm password do not match"
+      console.log(msg);
+      setMsg(msg);
+      return false;
+    }
+
+  }
+
     return (
       <>
         <div>
           <h2>Memory Verses</h2>
           <h4>Register</h4>
           <form>
-                  <label>Username: </label><input type="text" placeholder="* username" maxLength={25}></input><br/>
-                  <label>Confirm Username: </label><input type="text" placeholder="* confirm username" maxLength={25}></input><br/>
-                  <label>Password: </label><input type="password" placeholder="* password" maxLength={25}></input><br/>
-                  <label>Confirm Password: </label><input type="password" placeholder="* confirm password" maxLength={25}></input>
+                  <label>Username: </label><input ref={txtusername} type="text" placeholder="* username" maxLength={25}></input><br/>
+                  <label>Confirm Username: </label><input ref={confusername} type="text" placeholder="* confirm username" maxLength={25}></input><br/>
+                  <label>Password: </label><input ref={txtpassword} type="password" placeholder="* password" maxLength={25}></input><br/>
+                  <label>Confirm Password: </label><input ref={confpassword} type="password" placeholder="* confirm password" maxLength={25}></input>
                   <p></p>
-                  <button>Submit</button>
+                  <p>{msgText}</p>
+                  <p></p>
+                  <button onClick={(e) => handleSubmit(e)}>Submit</button>
               </form>
         </div>
         <p></p>
