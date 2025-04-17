@@ -55,6 +55,34 @@ function Register() {
       return false;
     }
 
+   const _post_data = {username:_uid, password: _pwd};
+
+    fetch(_url, {method: 'POST',
+      headers:{'Content-type': 'application/json'},
+      body:JSON.stringify(_post_data)}
+    )
+    .then((res) => res.json())
+    .then((data) => {
+
+      if(data.register === true) {
+        navigate("/dashboard", {replace:true});
+      }
+
+      setMsg(data.msg);
+
+    })
+
+    .catch((error) => {
+      setMsg("request error");
+      console.log("request error");
+      console.log(error);
+    })
+
+    txtusername.current.value = "";
+    txtpassword.current.value = "";
+    confusername.current.value = "";
+    confpassword.current.value = "";
+
   }
 
     return (
