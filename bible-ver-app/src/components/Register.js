@@ -99,11 +99,10 @@ function Register() {
                   <p>{msgText}</p>
                   <button onClick={(e) => handleSubmit(e)}>Submit</button>
                 </form>
+                <p></p>
+              <Link to="/">Home</Link>
             </div>
         </div>
-        <p></p>
-        <Link to="/login">Login</Link> {" | "}
-        <Link to="/">Home</Link>
       </>
     );
   }
