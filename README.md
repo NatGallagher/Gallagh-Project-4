@@ -23,8 +23,13 @@ bible-ver-app
 - react
 
 # github code repository
-
+- https://github.com/NatGallagher/biblvdashboard-api-app
+- https://github.com/NatGallagher/Gallagh-Project-4
 
 # website url
+- https://natgallagher.github.io/Gallagh-Project-4/#/
 
 # future improvements
+- users will be able to edit and insert their own selected verses
+- connect to an api that pulls up bible verses based on what the user searches
+- add opportunities to change translation
