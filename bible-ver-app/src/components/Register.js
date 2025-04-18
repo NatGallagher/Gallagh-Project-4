@@ -9,6 +9,7 @@ function Register() {
   const txtpassword = useRef("");
   const confusername = useRef("");
   const confpassword = useRef("");
+  const checkterms = useRef("")
   const [msgText, setMsg] = useState("");
 
   const handleSubmit = (e) => {
@@ -25,6 +26,7 @@ function Register() {
     const _pwd = txtpassword.current.value;
     const _confirmuid = confusername.current.value;
     const _confirmpwd = confpassword.current.value;
+    const _checkbox = checkterms.current.checked;
 
     if (_uid == null || _uid.trim().length == 0) {
       msg = "Username is required";
@@ -50,6 +52,13 @@ function Register() {
 
     if (_pwd !== _confirmpwd) {
       msg = "confirmed password does not match"
+      console.log(msg);
+      setMsg(msg);
+      return false;
+    }
+
+    if (_checkbox == false) {
+      msg = "Agree to Terms";
       console.log(msg);
       setMsg(msg);
       return false;
@@ -82,6 +91,7 @@ function Register() {
     txtpassword.current.value = "";
     confusername.current.value = "";
     confpassword.current.value = "";
+    checkterms.current.checked = false;
 
   }
 
@@ -96,6 +106,8 @@ function Register() {
                   <label>Confirm Username: </label><input ref={confusername} type="text" placeholder="* confirm username" maxLength={25}></input><br/>
                   <label>Password: </label><input ref={txtpassword} type="password" placeholder="* password" maxLength={25}></input><br/>
                   <label>Confirm Password: </label><input ref={confpassword} type="password" placeholder="* confirm password" maxLength={25}></input>
+                  <p></p>
+                  I agree to terms and services<input type="checkbox" ref={checkterms}/>
                   <p>{msgText}</p>
                   <button onClick={(e) => handleSubmit(e)}>Submit</button>
                 </form>
