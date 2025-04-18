@@ -66,9 +66,11 @@ function Dashboard() {
                     </tr>
                 </table>
             </div>
+            <p className="logout">
+                <Link to="/login">Logout</Link>
+            </p>
         </div>
-        <p></p>
-        <Link to="/login">Logout</Link>
+        
       </>
     );
   }
