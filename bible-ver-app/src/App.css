@@ -169,3 +169,26 @@ input {
   padding: 5px;
   border-radius: 5px;
 }
+
+
+ @media only screen and (max-width: 430px) {
+
+  .div-home { 
+ 
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+  }
+
+  .table-container {
+    border: 1px solid black;
+    width: 95%;
+    display: grid;
+    grid-template-rows: 5;
+    grid-template-columns: 1;
+    margin-top: 10px;
+    background-color: white;
+  }
+  
+ 
+ }
