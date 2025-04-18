@@ -41,7 +41,7 @@ function Register() {
     }
 
     if (_uid !== _confirmuid) {
-      msg = "username and confirm username do not match"
+      msg = "confirmed username does not match"
       console.log(msg);
       setMsg(msg);
       return false;
@@ -49,7 +49,7 @@ function Register() {
     }
 
     if (_pwd !== _confirmpwd) {
-      msg = "password and confirm password do not match"
+      msg = "confirmed password does not match"
       console.log(msg);
       setMsg(msg);
       return false;
@@ -99,7 +99,6 @@ function Register() {
                   <p>{msgText}</p>
                   <button onClick={(e) => handleSubmit(e)}>Submit</button>
                 </form>
-                <p></p>
               <Link to="/">Home</Link>
             </div>
         </div>
