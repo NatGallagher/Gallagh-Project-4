@@ -142,3 +142,17 @@ input {
 .links {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.div-register {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 70%;
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

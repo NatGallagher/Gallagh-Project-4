@@ -87,19 +87,19 @@ function Register() {
 
     return (
       <>
-        <div>
-          <h2>Memory Verses</h2>
-          <h4>Register</h4>
-          <form>
+        <div className="div-main-login">
+          <h1>Memory Verses</h1>
+            <div className="div-register">
+              <h2>Register</h2>
+                <form>
                   <label>Username: </label><input ref={txtusername} type="text" placeholder="* username" maxLength={25}></input><br/>
                   <label>Confirm Username: </label><input ref={confusername} type="text" placeholder="* confirm username" maxLength={25}></input><br/>
                   <label>Password: </label><input ref={txtpassword} type="password" placeholder="* password" maxLength={25}></input><br/>
                   <label>Confirm Password: </label><input ref={confpassword} type="password" placeholder="* confirm password" maxLength={25}></input>
-                  <p></p>
                   <p>{msgText}</p>
-                  <p></p>
                   <button onClick={(e) => handleSubmit(e)}>Submit</button>
-              </form>
+                </form>
+            </div>
         </div>
         <p></p>
         <Link to="/login">Login</Link> {" | "}
