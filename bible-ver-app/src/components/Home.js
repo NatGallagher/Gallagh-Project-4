@@ -6,18 +6,17 @@ function Home() {
 
     return (
       <>
-        <h2>Memory Verses</h2>
-        <p>Verses of Assurance</p>
-        <p></p>
-        <p>
-          <Link to="/login">Login</Link>
-        </p>
-        <p>
-          <Link to="/register">Register</Link>
-        </p>
-        <p>
-          <Link to="/dashboard">Dashboard</Link>
-        </p> 
+        <div className="div-main-home">
+          <h1>Memory Verses</h1>
+            <div className="div-home">
+              <h2>Verses of Assurance</h2>
+              <p className="links">
+                <Link to="/login">Login</Link> {" | "}
+
+                <Link to="/register">Register</Link>
+              </p>
+            </div>
+        </div>
       </>
     );
   }
