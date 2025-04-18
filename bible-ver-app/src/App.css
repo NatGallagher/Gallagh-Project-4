@@ -77,3 +77,18 @@
   justify-content: center;
   text-align: center;
 }
+
+.div-login {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
