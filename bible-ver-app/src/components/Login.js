@@ -57,23 +57,21 @@ function Login() {
 
     return (
       <>
-        <div className="div-main">
-          <h2>Memory Verses</h2>
+        <div className="div-main-login">
+          <h1>Memory Verses</h1>
             <div className="div-login">
-              <h4>Login</h4>
+              <h3>Login</h3>
               <form>
                   <label></label><input ref={txtusername} type="text" placeholder="Username" maxLength={25}></input><br/>
                   <label></label><input ref={txtpassword} type="password" placeholder="Password" maxLength={25}></input>
-                  <p></p>
                   <p>{msgText}</p>
+                  <button onClick={(e) => handleLogin(e)}>Login</button> 
                   <p></p>
-                  <button onClick={(e) => handleLogin(e)}>Login</button>
+                  Not a member?<Link to="/register">Register</Link>
+                  <p></p>
                 </form>
             </div>
-        </div>
-        <p></p>
-        <Link to="/register">Register</Link> {" | "}
-        <Link to="/">Home</Link>
+        </div>       
       </>
     );
   }

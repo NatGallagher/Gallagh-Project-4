@@ -84,6 +84,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
+  height: 60%;
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 form {
@@ -91,4 +97,20 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.div-main-login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #020024;
+  background: linear-gradient(0deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+input {
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
