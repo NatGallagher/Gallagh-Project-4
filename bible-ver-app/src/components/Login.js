@@ -17,7 +17,7 @@ function Login() {
     console.log(`login recieved: username: ${txtusername.current.value} password: ${txtpassword.current.value}`);
 
     let msg = "";
-    let replitUrl = "https://280f9539-b42b-4dc9-b331-82899c3782f0-00-21yat16xiedzc.picard.replit.dev"
+    let replitUrl = "https://biblev-api-app-gallaghernat8.replit.app"
 
     const _uid = txtusername.current.value;
     const _pwd = txtpassword.current.value;
