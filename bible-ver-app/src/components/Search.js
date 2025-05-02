@@ -1,0 +1,166 @@
+import { useRef, useState } from "react";
+
+function Search() {
+
+    const[verses, setVerses] = useState([]);
+    //const[savedVerses, setSavedVerses] = useState([]); Do not need this as of right now
+
+    const verseDisplay = useRef("");
+    const savedVerseDisplay = useRef("");
+    const bookInput = useRef("");
+    const chapterInput = useRef("");
+    const verseInput = useRef("");
+
+    const verseButton = useRef("");
+
+    const nextStepsDisplay = useRef("");
+
+    
+
+    function searchVerse() {
+        let msg = "searchVerse";
+        console.log(msg);
+        
+
+        const book = bookInput.current.value;
+        const chapter = chapterInput.current.value;
+        const verse = verseInput.current.value;
+
+        if (book == null || book.trim().length == 0) {
+            verseDisplay.current.innerText = "Please enter a book"
+            return false;
+        }
+
+        if (chapter == null || chapter.trim().length == 0) {
+            verseDisplay.current.innerText = "Please enter a chapter"
+            return false;
+        }
+
+        if (verse == null || verse.trim().length == 0) {
+            verseDisplay.current.innerText = "Please enter a verse"
+            return false;
+        }
+        
+        const _url = `https://bible-api.com/${book}+${chapter}:${verse}`;
+
+        fetch(_url)
+        .then(response => {
+            return response.json();
+        })
+
+        .then((data) => {
+            console.log(data);
+            verseDisplay.current.innerText = data.text;
+        })
+
+        
+
+        .catch(error => {
+            console.error('## There was a problem with the fetch operation:', error);
+            divDisplayInfo.innerText = error;
+          });
+    }
+
+    function addVerse() {
+        const book = bookInput.current.value;
+        const chapter = chapterInput.current.value;
+        const verse = verseInput.current.value;
+
+        const addedVerse = {
+            id: verses.length + 1,
+            book,
+            chapter,
+            verse
+        }
+
+
+        console.log(addedVerse);
+
+        setVerses((prevval) => [...prevval, addedVerse]);
+        
+    }
+
+    function savedVerse(versesId) {
+        const found = verses.find(v => v.id == versesId);
+
+        const _url = `https://bible-api.com/${found.book}+${found.chapter}:${found.verse}`;
+
+        fetch(_url)
+        .then(response => {
+            return response.json();
+        })
+
+        .then((data) => {
+            console.log(data);
+            savedVerseDisplay.current.innerText = data.text;
+        })
+
+        
+
+        .catch(error => {
+            console.error('## There was a problem with the fetch operation:', error);
+            divDisplayInfo.innerText = error;
+          });
+        //savedVerseDisplay.current.innerText = `${found.book} ${found.chapter}:${found.verse}`
+    }
+
+    function clearAll() {
+        verseDisplay.current.innerText = "";
+        savedVerseDisplay.current.innerText = "";
+        bookInput.current.value = "";
+        chapterInput.current.value = "";
+        verseInput.current.value = "";
+        nextStepsDisplay.current.innerText = "";
+    }
+
+    function deleteVerse(verseId) {
+
+        console.log("deleteVerse");
+
+        if(!window.confirm("delete verse?")){
+            return false;
+          }
+
+       const filteredVerses = verses.filter((verse) => verse.id !== verseId);
+       setVerses(filteredVerses);
+       
+    }
+
+    function nextSteps() {
+        nextStepsDisplay.current.innerText = "Add to bible verse app, storing verse in sqlite (attached to user)"
+    }
+
+
+    return (
+      <>
+        
+        <div className="div-main">
+            <h2>Search The Bible</h2> 
+            <div>         
+                <span>Book: </span><input ref={bookInput} style={{width: '105px'}}></input> {" "}                         
+                <span>Chapter: </span><input maxLength={3} ref={chapterInput} style={{width: '30px'}}></input> {" "}
+                <span>Verse: </span><input maxLength={3} ref={verseInput} style={{width: '30px'}}></input><br/>
+            </div>
+          <p></p>
+          <div>
+            <button onClick={searchVerse}>Search</button> {" "}
+            <button onClick={clearAll}>Clear</button>
+          </div>
+            <p ref={verseDisplay}></p>
+            <p ref={savedVerseDisplay}></p>
+            <button onClick={addVerse}>Add Verse</button>
+            <p></p>
+            {verses.map((verse) =>
+            <div key={verse.id}>
+                <button onClick={() => savedVerse(verse.id)}>{`${verse.book} ${verse.chapter}:${verse.verse}`}</button><button onClick={() => deleteVerse(verse.id)}>x</button>
+            </div>    
+            )}
+            <p></p>
+            <button onClick={nextSteps}>What's Next?</button>
+            <p ref={nextStepsDisplay}></p>
+        </div>
+      </>
+    );
+  }
+  
+  export default Search;
