@@ -170,6 +170,13 @@ input {
   border-radius: 5px;
 }
 
+.div-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
  @media only screen and (max-width: 430px) {
 

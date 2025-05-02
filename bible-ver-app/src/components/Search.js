@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import {Link} from "react-router-dom"
 
 function Search() {
 
@@ -134,7 +135,7 @@ function Search() {
     return (
       <>
         
-        <div className="div-main">
+        <div className="div-search">
             <h2>Search The Bible</h2> 
             <div>         
                 <span>Book: </span><input ref={bookInput} style={{width: '105px'}}></input> {" "}                         
@@ -158,7 +159,11 @@ function Search() {
             <p></p>
             <button onClick={nextSteps}>What's Next?</button>
             <p ref={nextStepsDisplay}></p>
+            <p className="logout">
+                <Link to="/login">Logout</Link>{" | "}<Link to="/dashboard">Dashboard</Link>
+            </p>
         </div>
+       
       </>
     );
   }
