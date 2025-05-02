@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import {Link} from "react-router-dom"
 
 function Search() {
@@ -16,6 +16,19 @@ function Search() {
 
     const nextStepsDisplay = useRef("");
 
+    useEffect(() => {
+        async function fetchSavedVerses() {
+          try {
+            const response = await fetch('/api/saved-verses');
+            const data = await response.json();
+            setVerses(data);
+          } catch (err) {
+            console.error('Error fetching saved verses:', err);
+          }
+        }
+      
+        fetchSavedVerses();
+      }, []);
     
 
     function searchVerse() {
@@ -128,7 +141,7 @@ function Search() {
     }
 
     function nextSteps() {
-        nextStepsDisplay.current.innerText = "Add to bible verse app, storing verse in sqlite (attached to user)"
+        nextStepsDisplay.current.innerText = "storing verse in sqlite (attached to user) 2. Manually insert info and see if you can display it with useEffect. (has not been tested) 3. INSERT the info (ie: book, verse, chapter)"
     }
 
 
