@@ -39,6 +39,20 @@ function Dashboard() {
 
         verseDisplay.current.innerHTML = `"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him, and He will make your paths straight." -Proverbs 3:5-6`
     }
+
+    function christTheCenter() {
+        let msgText = "christTheCenter"
+        console.log(msgText);
+
+        verseDisplay.current.innerHTML = `"Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!" -2 Corinthians 5:17`
+    }
+
+    function obediance() {
+        let msgText = "obediance"
+        console.log(msgText);
+
+        verseDisplay.current.innerHTML = `“Therefore, I urge you, brothers and sisters, in view of God’s mercy, to offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship.” -Romans 12:1`
+    }
     
     return (
       <>
@@ -55,6 +69,8 @@ function Dashboard() {
                         <button className="emotion" onClick={victory}>Assurance of Victory</button>
                         <button className="emotion" onClick={forgivness}>Assurance of Forgiveness</button>
                         <button className="emotion" onClick={guidance}>Assurance of Guidance</button>
+                        <button className="emotion" onClick={christTheCenter}>Christ the Center</button>
+                        <button className="emotion" onClick={obediance}>Obediance to Christ</button>
                     </td>
                     <td>
                         <div className="verse" ref={verseDisplay}>

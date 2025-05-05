@@ -61,7 +61,7 @@
   border: 1px solid black;
   width: 50%;
   display: grid;
-  grid-template-rows: 5;
+  grid-template-rows: 7;
   grid-template-columns: 1;
   margin-top: 10px;
   background-color: white;
