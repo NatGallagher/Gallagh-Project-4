@@ -19,14 +19,14 @@ function Search() {
     useEffect(() => {
         async function fetchSavedVerses() {
           try {
-            const response = await fetch('/api/saved-verses');
+            const response = await fetch('https://280f9539-b42b-4dc9-b331-82899c3782f0-00-21yat16xiedzc.picard.replit.dev/saved-verses');
+            if (!response.ok) throw new Error('Failed to fetch');
             const data = await response.json();
-            setVerses(data);
-          } catch (err) {
-            console.error('Error fetching saved verses:', err);
-          }
+            setVerses(data.msg);
+           } catch (error) {
+              console.error("Error loading saved verses", error);
+            }
         }
-      
         fetchSavedVerses();
       }, []);
     
