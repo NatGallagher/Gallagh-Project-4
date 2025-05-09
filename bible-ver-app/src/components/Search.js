@@ -91,6 +91,28 @@ function Search() {
         console.log(addedVerse);
 
         setVerses((prevval) => [...prevval, addedVerse]);
+
+        let _url = "https://280f9539-b42b-4dc9-b331-82899c3782f0-00-21yat16xiedzc.picard.replit.dev/insert-verse"
+
+        const _post_data = {book, chapter, verse};
+
+    fetch(_url, {method: 'POST',
+      headers:{'Content-type': 'application/json'},
+      body:JSON.stringify(_post_data)}
+    )
+    .then((res) => res.json())
+    .then((data) => {
+
+      console.log(data.msg);
+
+    })
+
+    .catch((error) => {
+      setVerses("request error");
+      console.log("request error");
+      console.log(error);
+    })
+
         
     }
 
