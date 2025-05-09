@@ -12,8 +12,6 @@ function Search() {
     const chapterInput = useRef("");
     const verseInput = useRef("");
 
-    const verseButton = useRef("");
-
     const nextStepsDisplay = useRef("");
 
     useEffect(() => {
@@ -108,7 +106,6 @@ function Search() {
     })
 
     .catch((error) => {
-      setVerses("request error");
       console.log("request error");
       console.log(error);
     })
@@ -159,6 +156,24 @@ function Search() {
 
        const filteredVerses = verses.filter((verse) => verse.id !== verseId);
        setVerses(filteredVerses);
+
+       let _url = "https://280f9539-b42b-4dc9-b331-82899c3782f0-00-21yat16xiedzc.picard.replit.dev/delete-verse";
+
+       fetch(_url, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: verseId }),
+       })
+       .then((res) => {
+        if(!res.ok) {
+          throw new Error("Failed to delete verse");
+        } else {
+          console.log("Verse deleted");
+        }
+       })
+       .catch((error) => {
+        console.error("error deleting verse:", error);
+       });
        
     }
 
