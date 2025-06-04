@@ -30,6 +30,6 @@ bible-ver-app
 - https://natgallagher.github.io/Gallagh-Project-4/#/
 
 # future improvements
-- users will be able to edit and insert their own selected verses
-- connect to an api that pulls up bible verses based on what the user searches
-- add opportunities to change translation
+- users will have added verses saved and show when pages is loaded
+- style search page
+- every added verse should be unique to the user
